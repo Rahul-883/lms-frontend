@@ -2,15 +2,20 @@
 import { useEffect } from 'react'
 import './App.css'
 import { Toaster } from 'react-hot-toast'
+import Footer from './components/Footer'
+import { Route, Routes } from 'react-router-dom'
+
+import AboutUs from './pages/Aboutus'
+import Home from './pages/home'
 
 function App() {
  
   return (
-    <>
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    </>
+    <Routes>
+        
+        <Routes path='/' element={<Home/>} />
+        <Routes path='/about' element={<AboutUs/>} />
+    </Routes>
   )
 }
 
